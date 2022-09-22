@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1Workspaces/Kristal/Scenes/Level.unity
     guid: eb2652f63586038478fbbb3c4c71e6d5
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: efdc042761c265244b00b5ae08d623ca, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 19ae16adbc79e3243bcfb29d8df95774, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 4a1b98a43494f4fff9fc87ee4c1bbd06, type: 2}
