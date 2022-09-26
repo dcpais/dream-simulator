@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/1Workspaces/Eva/Scenes/Menu.unity
-    guid: 576d2d18955e5b24ea6423438c5d6c50
-  - enabled: 1
-    path: Assets/1Workspaces/Eva/Scenes/Disclaimer.unity
-    guid: 451becc30e0a2e043bfdc4faf227fbdd
-  - enabled: 1
-    path: Assets/1Workspaces/Kristal/Scenes/Level.unity
-    guid: eb2652f63586038478fbbb3c4c71e6d5
+    path: Assets/1Workspaces/1MAIN/Scenes/Chapter 1.unity
+    guid: 8fbdb70b351aa274dadd8bd5d282635b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2442633411af583498d36ef655186a0f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ed65bea91cd53604faba964636503e30, type: 2}
