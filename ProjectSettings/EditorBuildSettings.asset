@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/1Workspaces/1MAIN/Scenes/Chapter 1.unity
     guid: 8fbdb70b351aa274dadd8bd5d282635b
   m_configObjects:
-<<<<<<< Updated upstream
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2442633411af583498d36ef655186a0f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ed65bea91cd53604faba964636503e30, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1446af05220307d41b0f694cf12aa5e2, type: 2}
-=======
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: efdc042761c265244b00b5ae08d623ca, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 19ae16adbc79e3243bcfb29d8df95774, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 12eab68b9d17c924095a3940a37b5742, type: 2}
->>>>>>> Stashed changes
