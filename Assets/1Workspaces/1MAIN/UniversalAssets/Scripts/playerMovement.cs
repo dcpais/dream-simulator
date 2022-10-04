@@ -6,6 +6,7 @@ public class playerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
+    public CameraShake cameraShake;
 
     public float speed = 12f;
     public float gravity = -19.6f;
@@ -16,10 +17,11 @@ public class playerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
-    bool isGrounded;
+	bool isGrounded;
+    bool previousGroundedState;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -29,12 +31,27 @@ public class playerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        bool y = Input.GetKey(KeyCode.F);
+        if (y) 
+        {
+            controller.Move(new Vector3(0, (float)(9.8 * Time.deltaTime), 0));
+            return;
+        }
+
+        if (!previousGroundedState && isGrounded && velocity.y < -20)
+        {
+            StartCoroutine(cameraShake.Shake(.15f, .4f));
+        }
+
         if (isGrounded && velocity.y < 0) {
             velocity.y = -2f;
         }
 
+
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        
 
         Vector3 move = transform.right * x + transform.forward * z; 
 
@@ -47,5 +64,6 @@ public class playerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        previousGroundedState = isGrounded;
     }
 }
