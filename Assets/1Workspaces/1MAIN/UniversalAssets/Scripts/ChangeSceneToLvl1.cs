@@ -12,9 +12,9 @@ public class ChangeSceneToLvl1 : MonoBehaviour
         _renderer = GetComponent<Renderer>();
     }
 
-    private void OnMouseDown()
+    public void GoToLevelOne() 
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
 public void QuitGame ()
