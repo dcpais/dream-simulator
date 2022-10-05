@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6352305955401393175, guid: 7c0a86ff208961d4a8969c81dac986b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 301.023
+      value: 298.666
       objectReference: {fileID: 0}
     - target: {fileID: 6352305955401393175, guid: 7c0a86ff208961d4a8969c81dac986b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -784,53 +784,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 330, y: 50, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &305093380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1643488905439901632, guid: 7c0a86ff208961d4a8969c81dac986b4, type: 3}
-  m_PrefabInstance: {fileID: 239262820}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &305093382 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1643488905449374838, guid: 7c0a86ff208961d4a8969c81dac986b4, type: 3}
-  m_PrefabInstance: {fileID: 239262820}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &305093383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305093380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3940d0abccc48c241a69b97d090314f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pinchAnimationAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Pinch Animation
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 5032b954-8121-4623-b153-9e13cd7df0c8
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripAnimationAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grip Animation
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 126a2432-4f06-4a3e-b627-7869e44ed953
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  handAnimator: {fileID: 305093382}
 --- !u!1 &465265438
 GameObject:
   m_ObjectHideFlags: 0

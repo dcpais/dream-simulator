@@ -14,7 +14,7 @@ public class ChangeSceneToLvl1 : MonoBehaviour
 
     public void GoToLevelOne() 
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
 public void QuitGame ()
