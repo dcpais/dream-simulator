@@ -925,11 +925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500313051816849847, guid: 6ef408bf7b2463346b38bd4cd9e780b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.4
+      value: 25.06
       objectReference: {fileID: 0}
     - target: {fileID: 4500313051816849847, guid: 6ef408bf7b2463346b38bd4cd9e780b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 113.9
+      value: 128.53
       objectReference: {fileID: 0}
     - target: {fileID: 4500313051816849847, guid: 6ef408bf7b2463346b38bd4cd9e780b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1104,6 +1104,7 @@ Transform:
   - {fileID: 1638175427}
   - {fileID: 1183433033}
   - {fileID: 1323247490}
+  - {fileID: 2082233921}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1197,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 494906, guid: aa44802c519f697478e7507c0f1f1b03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.65
+      value: 68.07
       objectReference: {fileID: 0}
     - target: {fileID: 494906, guid: aa44802c519f697478e7507c0f1f1b03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1500,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 11100000, guid: 7b12ff0838c1bfc46970414ffe81e813, type: 3}
       propertyPath: m_Animation
       value: 
-      objectReference: {fileID: 7400004, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      objectReference: {fileID: 7400002, guid: aa723b44260e74040869a722c46a85c5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b12ff0838c1bfc46970414ffe81e813, type: 3}
 --- !u!1001 &557341374
@@ -7827,7 +7828,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -9392,3 +9393,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5255975263859388180, guid: 7620b0d484d420e458c7045616184168, type: 3}
   m_PrefabInstance: {fileID: 2045784355}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2082233920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082233921}
+  - component: {fileID: 2082233922}
+  m_Layer: 0
+  m_Name: SpiderSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082233921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082233920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.41, y: 26.6, z: 138.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 425055522}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2082233922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082233920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3c85d98a54247b89217ee09cf8409d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swarmerPrefab: {fileID: 135334, guid: aa44802c519f697478e7507c0f1f1b03, type: 3}
+  swarmerInterval: 3.5
