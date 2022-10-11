@@ -28,7 +28,7 @@
 
 # IGNORING DOWNLOADED ASSETS
 /[Aa]ssets/*
-!/[Aa]ssets/1Workspaces
+!/[Aa]ssets/1MAIN
 !/[Aa]ssets/**/*.meta
 
 # Visual Studio Code
