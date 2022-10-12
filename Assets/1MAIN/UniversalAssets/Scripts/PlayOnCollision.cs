@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayOnCollision : MonoBehaviour
+public class playAudioOnCollision : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _clip;

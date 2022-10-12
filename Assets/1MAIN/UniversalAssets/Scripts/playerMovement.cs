@@ -31,14 +31,7 @@ public class playerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        bool y = Input.GetKey(KeyCode.F);
-        if (y) 
-        {
-            controller.Move(new Vector3(0, (float)(9.8 * Time.deltaTime), 0));
-            return;
-        }
-
-        if (!previousGroundedState && isGrounded && velocity.y < -20)
+        if (!previousGroundedState && isGrounded && velocity.y < -25)
         {
             StartCoroutine(cameraShake.Shake(.15f, .4f));
         }
@@ -47,12 +40,9 @@ public class playerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         
-
         Vector3 move = transform.right * x + transform.forward * z; 
 
         controller.Move(move * speed * Time.deltaTime);
