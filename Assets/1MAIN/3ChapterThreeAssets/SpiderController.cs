@@ -5,48 +5,27 @@ using UnityEngine.AI;
 
 public class SpiderController : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     public Transform target;
-    public LayerMask whatIsGround, whatIsPlayer;
+    public Animation animations;
 
-    //Patrolling
-    public Vector3 walkPoint;
-    bool walkPointSet;
-    public float walkPointRange;
+    private void Start()
+    {
+        //this.target = GameObject.FindWithTag("Player").transform;
+        Destroy(gameObject, 60);
+    }
 
-    //Attacking
-    public float timeBetweenAttacks;
-    private bool alreadyAttacked;
-
-    public float jumpRange;
-    public float chaseRange;
-    private bool playerInSightRange, playerInJumpRange;
-
-    private void Awake()
-        {
-            GetReferences();
-            this.target = GameObject.FindWithTag("Player").transform;
-        }
-
-        private void Update()
-        {
-            playerInSightRange = Physics.CheckSphere(transform.position, chaseRange, whatIsPlayer);
-            if (playerInSightRange) 
-            {
-                MoveToTarget();
-            }
-        }
-
-        private void MoveToTarget()
+    private void Update()
+    {
+        animations.Play();
+        Ray groundRay = new Ray(target.position, Vector3.down);
+        RaycastHit hit;
+        if (Physics.Raycast(groundRay, out hit))
         {
             agent.SetDestination(target.position);
-            transform.LookAt(target);   
         }
 
-        private void GetReferences()
-        {
-            agent = GetComponent<NavMeshAgent>(); 
-        }
-
+        transform.LookAt(target);
     }
+}
 

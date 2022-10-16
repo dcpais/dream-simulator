@@ -20,10 +20,12 @@ public class playerMovement : MonoBehaviour
 	bool isGrounded;
     bool previousGroundedState;
 
+    public GameObject footsteps;
+
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        footsteps.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,7 +45,16 @@ public class playerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         
-        Vector3 move = transform.right * x + transform.forward * z; 
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        if (move != new Vector3(0, 0, 0) && isGrounded)
+        {
+            footsteps.SetActive(true);
+        }
+        else 
+        {
+            footsteps.SetActive(false);
+        }
 
         controller.Move(move * speed * Time.deltaTime);
 

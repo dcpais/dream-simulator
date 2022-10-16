@@ -15,7 +15,7 @@ TagManager:
   - Post Processing
   - Unlit
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 1875146563
     locked: 0
