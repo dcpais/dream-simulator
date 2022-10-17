@@ -16,6 +16,6 @@ public class QuitOnClick : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("QUIT");
-	  Application.Quit();
+	    Application.Quit();
     }
 }

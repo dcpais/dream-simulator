@@ -35,7 +35,7 @@ public class playerMovement : MonoBehaviour
 
         if (!previousGroundedState && isGrounded && velocity.y < -25)
         {
-            StartCoroutine(cameraShake.Shake(.15f, .4f));
+            StartCoroutine(cameraShake.Shake(.4f, .6f));
         }
 
         if (isGrounded && velocity.y < 0) {

@@ -3,44 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
 public class VRPlayerController : MonoBehaviour
 {
-    [SerializeField] private InputActionReference jumpActionReference;
-    [SerializeField] private float jumpForce = 500.0f;
-    [SerializeField] private Transform groundCheckPoint;
-    [SerializeField] private LayerMask whatIsGround;
+    public InputActionReference jumpActionReference;
+    public float groundDist;
+    public LayerMask whatIsGround;
+    public Transform groundCheck;
+
+    public float speed;
+    public float jumpHeight;
+    public float gravity;
+
+    public GameObject footsteps;
 
     public CameraShake cameraShake;
-    private AudioClip _clip;
 
-    private Rigidbody _body;
+    public CharacterController controller;
 
-    private bool IsGrounded => Physics.OverlapSphere(groundCheckPoint.position, .25f, whatIsGround).Length > 0;
-    private bool previousGroundState;
+    Vector3 velocity;
+
+    bool previousGroundedState;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
     {
-        _body = GetComponent<Rigidbody>();
+
         jumpActionReference.action.performed += OnJump; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGrounded && !previousGroundState && _body.velocity.y < -20)
+
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDist, whatIsGround);
+
+        if (!previousGroundedState && isGrounded && velocity.y < -25)
         {
-            StartCoroutine(cameraShake.Shake(0.15f, 0.4f));
-            // AudioSource.PlayClipAtPoint(_clip, transform.position);
+            StartCoroutine(cameraShake.Shake(.4f, .6f));
         }
 
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
+        previousGroundedState = isGrounded;
     }
 
     private void OnJump(InputAction.CallbackContext obj)
     {
-        if (!IsGrounded) return;
-        _body.AddForce(Vector3.up * jumpForce);
+        if (!isGrounded)
+        {
+            return;
+        }
     }
 }

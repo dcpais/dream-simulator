@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; 
+using UnityEngine.AI;
 
 public class SpiderController : MonoBehaviour
 {
@@ -23,9 +23,10 @@ public class SpiderController : MonoBehaviour
         if (Physics.Raycast(groundRay, out hit))
         {
             agent.SetDestination(target.position);
+
         }
 
-        transform.LookAt(target);
+        //transform.LookAt(target);
     }
 }
 

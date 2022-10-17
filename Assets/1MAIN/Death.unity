@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1108,6 +1108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4500313051816849832, guid: 6ef408bf7b2463346b38bd4cd9e780b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4500313051816849833, guid: 6ef408bf7b2463346b38bd4cd9e780b9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1875,7 +1879,7 @@ Terrain:
   m_GameObject: {fileID: 1385327265}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: edf8ffe4fa9a5eb4abb0498b816039b2, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5

@@ -8,12 +8,13 @@ public class captionManager : MonoBehaviour
 {
 
     public TextMeshProUGUI textBox;
+    private bool isRunning;
+    private Coroutine current = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        StartCoroutine(startCaptionSequence("OogedyBoogedy", 10));
+
     }
 
     // Update is called once per frame
@@ -22,9 +23,19 @@ public class captionManager : MonoBehaviour
         
     }
 
+    public void createCaption(string text, float duration)
+    {
+        current = StartCoroutine(startCaptionSequence(text, duration));
+    }
+    
     public IEnumerator startCaptionSequence(string text, float duration)
     {
-        yield return new WaitForSeconds(4);
+        if (current != null)
+        {
+            StopCoroutine(current);
+
+            current = null;
+        }
         float fadeTime = 0.5f; 
         float elapsed = 0.0f;
         textBox.text = text;
@@ -35,7 +46,6 @@ public class captionManager : MonoBehaviour
             if (elapsed <= fadeTime)
             {
                 textBox.color = new Color(1, 1, 1, elapsed / fadeTime);
-                Debug.Log(textBox.color.ToString());
             }
             else if (elapsed > fadeTime && elapsed < duration - fadeTime) 
             {

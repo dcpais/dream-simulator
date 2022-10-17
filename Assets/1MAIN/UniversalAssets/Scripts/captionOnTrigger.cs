@@ -5,17 +5,12 @@ using UnityEngine;
 public class captionOnTrigger : MonoBehaviour
 {
     public string text;
-    public Camera mainCamera;
+    public float duration;
+    public captionManager manager;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        manager.createCaption(text, duration);
+        Destroy(gameObject, 2);
     }
 }

@@ -5,9 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class deathCollisionTrigger : MonoBehaviour
 {
+
+    public GameObject deathBlackout;
+    public AudioClip clip;
+    public GameObject wind;
+    public Transform player;
+    public GameObject textlayer;
+
     public void OnTriggerEnter(Collider other)
     {
-        
-        SceneManager.LoadScene (3);
+        StartCoroutine(death());
+    }
+
+    public IEnumerator death()
+    {
+        deathBlackout.SetActive(true);
+        textlayer.SetActive(false);
+        wind.SetActive(false);
+        AudioSource.PlayClipAtPoint(clip, player.position);
+        yield return new WaitForSecondsRealtime(2);
+        SceneManager.LoadScene(3);
     }
 }

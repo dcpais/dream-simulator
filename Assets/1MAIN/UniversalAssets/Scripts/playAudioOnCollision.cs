@@ -13,7 +13,7 @@ public class PlayOnCollision : MonoBehaviour
         {
 
             AudioSource.PlayClipAtPoint(_clip, transform.position);
-            Destroy(gameObject);
+            Destroy(gameObject, 2);
         }
     }
 }
