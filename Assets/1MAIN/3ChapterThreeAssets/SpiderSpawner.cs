@@ -17,9 +17,10 @@ public class SpiderSpawner : MonoBehaviour
     private IEnumerator spawnSpider(float interval, GameObject spider) 
     {
         yield return new WaitForSeconds(interval);
-        if (Vector3.Distance(this.transform.position, playerTracker.position) < 20.0f) 
+        if (Vector3.Distance(this.transform.position, playerTracker.position) < 50.0f) 
         {
-            GameObject newSpider = Instantiate(spider, this.transform.position, Quaternion.identity);
+            Vector3 spawnPos = new Vector3(transform.position.x, 0, transform.position.z);
+            Instantiate(spider, spawnPos, Quaternion.identity);
             count += 1;
         }
 

@@ -11,7 +11,14 @@ public class SpiderController : MonoBehaviour
 
     private void Start()
     {
-        //this.target = GameObject.FindWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+        this.target = GameObject.FindWithTag("Player").transform;
+        animations.PlayQueued("Attack");
+        animations.PlayQueued("Attack");
+        animations.PlayQueued("Walk");
+        animations.PlayQueued("Walk");
+        animations.PlayQueued("Walk");
+        animations.PlayQueued("Walk");
         Destroy(gameObject, 60);
     }
 
@@ -25,7 +32,10 @@ public class SpiderController : MonoBehaviour
             agent.SetDestination(target.position);
 
         }
-
+        if (!animations.isPlaying) 
+        {
+            animations.Play("Walk");
+        }
         //transform.LookAt(target);
     }
 }
