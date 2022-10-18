@@ -15,7 +15,7 @@ Currently, it only supports windows. Has VR functionality that is still WIP.
 
 
 ### Compile game through unity:
-#####Not recommended, as the repository does not carry over all build settings. May lead to faulty build
+###### Not recommended, as the repository does not carry over all build settings. May lead to faulty build
 - Create a new unity project in version 2021.8.3f1 or above, using the 3D Core template.
 - Download this repository to the project folder
 - Build the game for PC and WINDOWS. 
