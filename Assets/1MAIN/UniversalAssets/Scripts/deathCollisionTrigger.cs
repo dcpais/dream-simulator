@@ -24,6 +24,6 @@ public class deathCollisionTrigger : MonoBehaviour
         wind.SetActive(false);
         AudioSource.PlayClipAtPoint(clip, player.position);
         yield return new WaitForSecondsRealtime(2);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }
