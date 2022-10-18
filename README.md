@@ -1,8 +1,25 @@
-# dream-simulator
-## VR Horror game/simulation in UNITY
+# PhoboPhobia: A Dream Simulator
+## A Dream-like Horror game made with Unity (With intended VR Support)
 
-##### To run the game (so far):
-- File -> Build Settings... 
-- Drag in in the following order (from scenes) Menu, Disclaimer, Level 
-- (Menu, Disclaimer are in 1Workspaces>Eva>Scenes, Level is in 1Workspaces>Kristal>Scenes)
-- Click run (play button top centre) when in the Menu scene
+### To Install and Play the game:
+The latest downloadable version of the game can be found here:
+https://drive.google.com/drive/folders/1k2Hofa2FgHSh8eFKUZWO5K3wMtHP9xLE?usp=sharing
+
+To play the game:
+- Go to the link. Download the contents of the folder.
+- Unzip the file.
+- Now double click the EXE to run the game. 
+- To exit the game, you may need to use the ALT + F4 shortcut, or force quit it with task manager
+
+Currently, it only supports windows. Has VR functionality that is still WIP. 
+
+### Gameplay Demo Video (Backup in case game does not play)
+A full length gameplay demo has been recorded and kept at the following link:
+https://drive.google.com/drive/folders/1D_BjIXBDLQR143vKG-UDWukiV3ITQTFx?usp=sharing
+
+
+### IN THE WORST CASE: Compile game through unity:
+###### Not recommended, as the repository does not carry over all build settings. May lead to faulty build
+- Create a new unity project in version 2021.8.3f1 or above, using the 3D Core template.
+- Download this repository to the project folder
+- Build the game for PC and WINDOWS. 
