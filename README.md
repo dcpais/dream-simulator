@@ -13,8 +13,12 @@ To play the game:
 
 Currently, it only supports windows. Has VR functionality that is still WIP. 
 
+### Gameplay Demo Video (Backup in case game does not play)
+A full length gameplay demo has been recorded and kept at the following link:
+https://drive.google.com/drive/folders/1D_BjIXBDLQR143vKG-UDWukiV3ITQTFx?usp=sharing
 
-### Compile game through unity:
+
+### IN THE WORST CASE: Compile game through unity:
 ###### Not recommended, as the repository does not carry over all build settings. May lead to faulty build
 - Create a new unity project in version 2021.8.3f1 or above, using the 3D Core template.
 - Download this repository to the project folder
