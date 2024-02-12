@@ -15,9 +15,11 @@ Welcome to Phobophobia, a VR-based game designed to provide users with an immers
 
 ## Gameplay and Demos
 
+<p align="center">
 ![Screenshot_1](https://github.com/dcpais/dream-simulator/assets/86701936/6edea140-6f7e-4d39-a1c0-2c59327d6e36)
 ![Screenshot_2](https://github.com/dcpais/dream-simulator/assets/86701936/82c93ee2-f480-4b38-8607-0c8c289fbf9a)
 https://github.com/dcpais/dream-simulator/assets/86701936/7010a2e2-8be7-43ee-9b05-67b70b1670ac
+</p>
 
 ## Download and Play
 
